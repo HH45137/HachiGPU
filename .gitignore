@@ -1,2 +1,4 @@
 prj/*
 !prj/.gitkeep
+*.vcd
+*.vvp

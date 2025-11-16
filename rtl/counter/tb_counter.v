@@ -1,6 +1,11 @@
-\`timescale 1ns/1ns
+`timescale 1ns/1ns
 
 module tb_counter();
+
+    initial begin
+        $dumpfile("counter.vcd");
+        $dumpvars(0, tb_counter);
+    end
 
     reg sys_clk;
     reg sys_rst_n;
@@ -12,6 +17,10 @@ module tb_counter();
         sys_rst_n <= 1'b0;
         #20
         sys_rst_n <= 1'b1;
+        
+        // Wait....
+        #5000
+        $finish;
     end
 
     always #10 sys_clk = ~sys_clk;
@@ -24,7 +33,7 @@ module tb_counter();
         .sys_clk(sys_clk),
         .sys_rst_n(sys_rst_n),
 
-        .led_out(led_out),
+        .led_out(led_out)
     );
 
 endmodule

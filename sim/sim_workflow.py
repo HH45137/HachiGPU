@@ -100,11 +100,9 @@ class SimWorkflow:
         tb_name = f'tb_{self.name}'
         v_name = f'{self.name}'
         
-        # 构建文件路径
         tb_file = self.rtl_dir / base_name / f"{tb_name}.v"
         v_file = self.rtl_dir / base_name / f"{v_name}.v"
-        
-        # 检查文件是否存在
+    
         if not tb_file.exists():
             print(f"✗ Testbench file not found: {tb_file}")
             return False

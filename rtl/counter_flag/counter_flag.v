@@ -1,4 +1,4 @@
-module counter
+module counter_flag
 #(
     parameter CNT_MAX = 25'd24_999_999
 )

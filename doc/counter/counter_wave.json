@@ -1,0 +1,9 @@
+{
+  signal: [
+    {name: 'sys_clk', wave: 'l.hlp.............', period: 0.5},
+    {name: 'sys_rst_n', wave: 'l.h.............................', period: 0.5},
+    {name: 'cnt', wave: '=.==...===...==.', period: 1.0, data: ['', '0', '1~N-1', 'N', '0', '1~N-1', 'N', '0~N']},
+    {name: 'led_out', wave: 'l.......h.....l.', period: 1.0},
+	],
+foot:{tock:1},
+}
